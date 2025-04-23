@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import useProduct from "../hooks/useProduct";
 
 const ProductCard = () => {
   const { product, loading, } = useProduct();
   const [searcher , setSearcher] = useState([])
 
+
+  useEffect(() => {
+    if (product.length > 0) {
+      setSearcher(product);
+    }
+  }, [product]); 
     const toggleFavourite = (fav) => {
       const getData = JSON.parse(localStorage.getItem("favour"))||[];
       console.log("get", getData);
