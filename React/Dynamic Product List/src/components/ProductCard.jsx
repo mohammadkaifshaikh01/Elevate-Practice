@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import useProduct from "../hooks/useProduct";
 
 const ProductCard = () => {
-  const { product, loading, setProduct } = useProduct();
+  const { product, loading, } = useProduct();
+  const [searcher , setSearcher] = useState([])
 
     const toggleFavourite = (fav) => {
       const getData = JSON.parse(localStorage.getItem("favour"))||[];
@@ -10,8 +11,27 @@ const ProductCard = () => {
       console.log("set", fav);
       getData.push(fav)
       localStorage.setItem("favour", JSON.stringify(getData));
+      // alert("Product Add In Your Favourite List")
 
     };
+
+    // const filterData = data.filter((elem) => elem.about.name.toLowerCase().includes(search.toLowerCase()))
+    // setSearcher(filterData)
+    const searchFilter = (e) =>{
+      const search = e.target.value
+
+      if (search.length === 0) {
+        setSearcher(product)
+      }else{
+
+        console.log(search)
+        console.log("----",product)
+        const response  =  product.filter((elem)=>elem.name.toLowerCase().includes(search.toLowerCase()))
+        console.log("response",response)
+        
+        setSearcher(response)
+      }
+    }
 
 //   const toggleFavourite = (id) => {
 //     setProduct((prev) =>
@@ -33,8 +53,11 @@ const ProductCard = () => {
       <h2 className="text-3xl font-bold text-center mb-10 text-indigo-700">
         Explore Our Products
       </h2>
+      <div>
+      <input type="text" placeholder="Search Product....." className="mt-5 mb-5 border  w-full p-3 rounded-xl color-gray-500" onChange={searchFilter} />
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {product.map((elem) => (
+        {searcher.map((elem) => (
           <div
             key={elem.id}
             className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 relative"
