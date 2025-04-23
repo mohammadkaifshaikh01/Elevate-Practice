@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+      }
+
+      .container {
+        margin-bottom: 30px;
+        background: white;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input {
+        margin: 10px 10px 10px 0;
+        padding: 10px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="name" placeholder="Enter Your Name" />
+      <input type="email" id="email" placeholder="Enter Your email" />
+      <input type="text" id="city" placeholder="Enter Your City" />
+      <button onclick="addUser()">Add User</button>
+    </div>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>City</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableData"></tbody>
+    </table>
+  </body>
+  <script>
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const city = document.getElementById("city");
+    const data = document.getElementById("tableData");
+
+    function addUser() {
+      const userData = document.createElement("tr");
+
+      userData.innerHTML = `
+      <td>${name.value}</td>
+      <td>${email.value}</td>
+      <td>${city.value}</td>
+      <td> <button onclick="deleteRow()">Delete</button></td>
+     
+      `;
+      data.appendChild(userData)
+
+
+      console.log("Before Clicking"  , name.value , email.value)
+
+      name.value = ""
+      email.value = ""
+      city.value = ""
+      
+   
+      console.log("After Clicking"  , name.value , email.value)
+    }
+
+  </script>
+</html>

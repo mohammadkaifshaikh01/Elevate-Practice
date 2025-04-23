@@ -1,0 +1,123 @@
+[
+   {
+     "id": 1,
+     "name": "Wireless Mouse",
+     "price": 799,
+     "image": "https://www.tpstech.in/cdn/shop/products/HP_220_Silent_Wireless_Mouse_from_tpstech.in-main3.jpg?v=1657774713",
+     "category": "Electronics",
+     "isFav": false
+   },
+   {
+     "id": 2,
+     "name": "Bluetooth Speaker",
+     "price": 1499,
+     "image": "https://www.boat-lifestyle.com/cdn/shop/files/Stone_SpinXPro_1_1024x.png?v=1709717404",
+     "category": "Electronics",
+     "isFav": false
+   },
+   {
+     "id": 3,
+     "name": "Running Shoes",
+     "price": 2499,
+     "image": "https://bersache.com/cdn/shop/files/WhatsAppImage2024-05-08at13.24.46.jpg?v=1741007464&width=1080",
+     "category": "Footwear",
+     "isFav": false
+   },
+   {
+     "id": 4,
+     "name": "Backpack",
+     "price": 999,
+     "image": "https://m.media-amazon.com/images/I/916ncLdqUwL.jpg",
+     "category": "Accessories",
+     "isFav": false
+   },
+   {
+     "id": 5,
+     "name": "Smart Watch",
+     "price": 3499,
+     "image": "https://m.media-amazon.com/images/I/61uaWJYU61L.jpg",
+     "category": "Electronics",
+     "isFav": false
+   },
+   {
+     "id": 6,
+     "name": "Leather Wallet",
+     "price": 599,
+     "image": "https://leatherhub.in/cdn/shop/files/7427384131.webp?v=1670489626&width=1500",
+     "category": "Accessories",
+     "isFav": false
+   },
+   {
+     "id": 7,
+     "name": "Denim Jeans",
+     "price": 1999,
+     "image": "https://frenchcrown.in/cdn/shop/files/J341_2.jpg?v=1710414840&width=1750",
+     "category": "Clothing",
+     "isFav": false
+   },
+   {
+     "id": 8,
+     "name": "T-Shirt",
+     "price": 499,
+     "image": "https://m.media-amazon.com/images/I/71TAJJz3sdL._AC_UY1100_.jpg",
+     "category": "Clothing",
+     "isFav": false
+   },
+   {
+     "id": 9,
+     "name": "Sunglasses",
+     "price": 899,
+     "image": "https://www.woggles.in/api/catalog/products/woggles_new_image_9_12_2022/edge_rider_polarized_sports_sunglasses_base.jpg",
+     "category": "Accessories",
+     "isFav": false
+   },
+   {
+     "id": 10,
+     "name": "Fitness Band",
+     "price": 1299,
+     "image": "https://furper.com/cdn/shop/products/xiaomi-mi-band-8-fitness-band-with-spo2-sensor-162-inch-amoled-display-smart-band-xiaomi-black-185546_large.jpg?v=1682013540",
+     "category": "Electronics",
+     "isFav": false
+   },
+   {
+     "id": 11,
+     "name": "Laptop Stand",
+     "price": 699,
+     "image": "https://gadgets24.in/wp-content/uploads/2022/01/61UlXGdpJVS._SL1482_.jpg",
+     "category": "Office",
+     "isFav": false
+   },
+   {
+     "id": 12,
+     "name": "Notebook",
+     "price": 199,
+     "image": "https://m.media-amazon.com/images/I/71u5-wVIYuL._AC_UF894,1000_QL80_.jpg",
+     "category": "Office",
+     "isFav": false
+   },
+   {
+     "id": 13,
+     "name": "Pen Set",
+     "price": 249,
+     "image": "https://m.media-amazon.com/images/I/81aTYb7hYvL._AC_UF1000,1000_QL80_.jpg",
+     "category": "Office",
+     "isFav": false
+   },
+   {
+     "id": 14,
+     "name": "Power Bank",
+     "price": 1099,
+     "image": "https://m.media-amazon.com/images/I/614OfiBkyZL.jpg",
+     "category": "Electronics",
+     "isFav": false
+   },
+   {
+     "id": 15,
+     "name": "Travel Mug",
+     "price": 499,
+     "image": "https://m.media-amazon.com/images/I/61C8APs6kpL.jpg",
+     "category": "Kitchen",
+     "isFav": false
+   }
+ ]
+ 
