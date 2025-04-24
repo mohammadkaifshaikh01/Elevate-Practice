@@ -17,6 +17,7 @@ const ProductCard = () => {
       console.log("set", fav);
       getData.push(fav)
       localStorage.setItem("favour", JSON.stringify(getData));
+      alert("Product Added In Favourite")
       // alert("Product Add In Your Favourite List")
 
     };
