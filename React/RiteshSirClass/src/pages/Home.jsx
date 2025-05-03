@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [character, setCharacter] = useState([]);
@@ -7,7 +8,7 @@ const Home = () => {
 //   const totalPages = Math.ceil(character.length / 6)
 const [totalPages , setTotalPages] = useState(1)
 const [loading , setLoading] = useState(true)
-
+const navigate = useNavigate()
   const fetchData = async () => {
     try {
       const response = await axios.get(
@@ -16,7 +17,7 @@ const [loading , setLoading] = useState(true)
       setCharacter(response.data.results.slice(0, 6));
       setLoading(false)
       // console.log(response.data.info.pages)
-      // console.log(response.data.results)
+      console.log(response.data.results)
       setTotalPages(response.data.info.pages)
     } catch (error) {
       console.log(error);
@@ -48,8 +49,9 @@ const [loading , setLoading] = useState(true)
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {character.map((elem) => (
           <div
+           onClick={() => navigate(`/character/${elem.id}`)}
             key={elem.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden p-4 text-center"
+            className="bg-white rounded-lg shadow-md overflow-hidden p-4 text-center cursor-pointer"
           >
             <img
               src={elem.image}
