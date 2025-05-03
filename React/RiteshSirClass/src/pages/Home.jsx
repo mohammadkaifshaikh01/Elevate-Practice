@@ -38,6 +38,11 @@ const navigate = useNavigate()
      </div>
    );
  }
+
+ const   randomCharacter = () =>{
+  const randomId = Math.floor(Math.random() * 826) + 1;
+  navigate(`/character/${randomId}`)
+ }
  
 
   return (
@@ -46,7 +51,13 @@ const navigate = useNavigate()
         Rick and Morty Characters
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <button
+        onClick={randomCharacter}
+        className="mt-4 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 cursor-pointer"
+      >
+        Random Character
+      </button>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
         {character.map((elem) => (
           <div
            onClick={() => navigate(`/character/${elem.id}`)}
