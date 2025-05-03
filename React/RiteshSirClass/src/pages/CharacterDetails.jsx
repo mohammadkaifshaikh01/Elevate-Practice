@@ -67,7 +67,8 @@ const CharacterDetails = () => {
           <span className="font-semibold">Location:</span> {character.location.name}
         </p>
         <p className="text-gray-700 text-lg">
-          <span className="font-semibold">Created:</span> {character.created}
+          <span className="font-semibold">Created:</span> {' '}
+          {new Date(character.created).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
         </p>
       </div>
 
