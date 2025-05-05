@@ -7,11 +7,11 @@ const FetchPagDeb = () => {
   const [searcher, setSearcher] = useState([]);
 
   const itemPerPage = 10;
-
+  
   const lastIndexOfItem = currentPage * itemPerPage;
   const firstIndexOfItem = lastIndexOfItem - itemPerPage;
-  const currentItem = data.slice(firstIndexOfItem, lastIndexOfItem);
-  const totalPages = Math.ceil(data.length / itemPerPage);
+  const currentItem = searcher.slice(firstIndexOfItem, lastIndexOfItem);
+  const totalPages = Math.ceil(searcher.length / itemPerPage);
   console.log(totalPages);
 
   useEffect(() => {
@@ -70,7 +70,7 @@ const FetchPagDeb = () => {
         />
       </div>
 
-      {searcher.map((elem) => (
+      {currentItem.map((elem) => (
         <div
           key={elem.id}
           className="bg-white shadow-md rounded-xl p-6 mb-4 border border-gray-200"
