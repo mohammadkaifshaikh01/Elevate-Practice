@@ -6,6 +6,7 @@ const bookRoute = express.Router()
 
 
 bookRoute.post("/add-book" , addBook)
+// bookRoute.get("/get-book" , getBook)
 bookRoute.get("/get-book" , getBook)
 
 
